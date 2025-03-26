@@ -1,14 +1,16 @@
-﻿using System;
+﻿using CastleDefender.Components;
+using jdkore.helpers;
 using OOECS.Entity;
-using UnityEngine;
 
 namespace CastleDefender
 {
-    public class GameSetup : MonoBehaviour
+    public class GameSetup : Initializable
     {
-        private void Awake()
+        public override void Initialize()
         {
             EntityManager.Reset();
+            var singletonEntity = EntityUtils.CreateSingletonEntity();
+            singletonEntity.Add(new MobSpawnTracking());
         }
     }
 }
