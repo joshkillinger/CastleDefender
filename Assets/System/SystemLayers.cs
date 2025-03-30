@@ -5,6 +5,7 @@
         PreFrameDataUpdate,
         FrameDataUpdate,
         PostFrameDataUpdate,
+        Targeting,
         ResolveAbility,
         ApplyHealthMod,
         DespawnEntities,

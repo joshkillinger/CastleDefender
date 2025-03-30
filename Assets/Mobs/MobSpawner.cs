@@ -39,6 +39,7 @@ namespace Mobs
             mob.Add(speed);
             mob.Add(new WorldPositionComponent(offscreenSpawnPoint));
             mob.Add(new OwningTeamComponent(Teams.Mobs));
+            mob.Add(new TargetingComponent());
 
             return mob;
         }
