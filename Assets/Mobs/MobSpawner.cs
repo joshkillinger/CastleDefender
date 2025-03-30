@@ -34,9 +34,11 @@ namespace Mobs
             mob.Add(new CurrentArmorComponent(1));
             mob.Add(new MaxHealthComponent(10));
             mob.Add(new CurrentHealthComponent(10));
-            mob.Add(new BaseSpeedComponent(1));
-            mob.Add(new CurrentSpeedComponent(1));
+            var speed = new SpeedComponent(Vector3.right, Vector3.right);
+            speed.CurrentSpeed = speed.BaseSpeed * -1;
+            mob.Add(speed);
             mob.Add(new WorldPositionComponent(offscreenSpawnPoint));
+            mob.Add(new OwningTeamComponent(Teams.Mobs));
 
             return mob;
         }

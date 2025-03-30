@@ -11,6 +11,7 @@ namespace CastleDefender
             EntityManager.Reset();
             var singletonEntity = EntityUtils.CreateSingletonEntity();
             singletonEntity.Add(new MobSpawnTracking());
+            singletonEntity.Add(new OwningTeamComponent(Teams.System));
         }
     }
 }
