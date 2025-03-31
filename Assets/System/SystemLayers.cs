@@ -6,6 +6,7 @@
         FrameDataUpdate,
         PostFrameDataUpdate,
         Targeting,
+        AiLogic,
         ResolveAbility,
         ApplyHealthMod,
         DespawnEntities,

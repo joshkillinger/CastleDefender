@@ -1,4 +1,5 @@
-﻿using CastleDefender.Components;
+﻿using CastleDefender.Abilities;
+using CastleDefender.Components;
 using CastleDefender.System;
 using OOECS.Component.Location;
 using OOECS.Entity;
@@ -40,6 +41,7 @@ namespace Mobs
             mob.Add(new WorldPositionComponent(offscreenSpawnPoint));
             mob.Add(new OwningTeamComponent(Teams.Mobs));
             mob.Add(new TargetingComponent());
+            mob.Add(new AbilityComponent(AbilityDefinitions.GetRangedAttack()));
 
             return mob;
         }
