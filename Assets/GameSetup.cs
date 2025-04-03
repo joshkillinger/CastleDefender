@@ -20,6 +20,7 @@ namespace CastleDefender
         {
             var singletonEntity = EntityUtils.CreateSingletonEntity();
             singletonEntity.Add(new MobSpawnTracking());
+            singletonEntity.Add(new EntitiesToDestroy());
             singletonEntity.Add(new OwningTeamComponent(Teams.System));
         }
 
@@ -28,8 +29,7 @@ namespace CastleDefender
             var tower = EntityManager.CreateEntity();
             tower.Add(new NameComponent("Tower"));
             tower.Add(new WorldPositionComponent(new Vector3(-17, 0, 0)));
-            tower.Add(new MaxHealthComponent(100));
-            tower.Add(new CurrentHealthComponent(100));
+            tower.Add(new HealthComponent(100));
             tower.Add(new OwningTeamComponent(Teams.Player));
         }
     }

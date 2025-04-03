@@ -14,5 +14,10 @@ namespace CastleDefender.Components
             BaseSpeed = baseSpeed;
             Acceleration = acceleration;
         }
+
+        public override string DebugString()
+        {
+            return $"{base.DebugString()}: Base {BaseSpeed}, Current {CurrentSpeed}";
+        }
     }
 }

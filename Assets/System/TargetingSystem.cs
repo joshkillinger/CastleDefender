@@ -50,7 +50,7 @@ namespace CastleDefender.System
 
         private static bool TargetQuery(Entity entity, Teams sourceTeam)
         {
-            if (!entity.TryGet<CurrentHealthComponent>(out var health) || health.Value == 0)
+            if (!entity.TryGet<HealthComponent>(out var health) || health.Current == 0)
             {
                 return false;
             }
