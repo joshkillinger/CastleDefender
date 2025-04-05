@@ -22,7 +22,7 @@ namespace CastleDefender.System
                     continue;
                 }
                 
-                var target = entity.TryGet<TargetingComponent>();
+                var target = entity.TryGet<TargetComponent>();
                 if (target.Value == null)
                 {
                     continue;

@@ -13,6 +13,7 @@
         MoveEntities,
         SpawnEntities,
         Instantiate,
+        Render,
         Cleanup,
     }
 }

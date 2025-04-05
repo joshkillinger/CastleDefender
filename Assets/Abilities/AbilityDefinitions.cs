@@ -10,7 +10,7 @@ namespace CastleDefender.Abilities
             Damage = 1,
             Name = "BasicMeleeAttack",
             Range = .1f,
-            Tags = new List<string>() { "Attack", "Melee" },
+            Tags = new HashSet<string>() { "Attack", "Melee" },
             Apply = AbilityLogic.BasicAttack
         };
         
@@ -25,7 +25,7 @@ namespace CastleDefender.Abilities
             Damage = 1,
             Name = "BasicMeleeAttack",
             Range = 3f,
-            Tags = new List<string>() { "Attack", "Ranged", "Beam" },
+            Tags = new HashSet<string>() { "Attack", "Ranged", "Beam" },
             Apply = AbilityLogic.BasicAttack
         };
         

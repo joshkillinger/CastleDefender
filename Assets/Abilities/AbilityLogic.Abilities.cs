@@ -1,4 +1,5 @@
 using CastleDefender.Components;
+using CastleDefender.Effects;
 using OOECS.Component.Location;
 using OOECS.Entity;
 using UnityEngine;
@@ -11,6 +12,7 @@ namespace CastleDefender.Abilities
         {
             abilityComponent.Value.Apply(abilityComponent, targetValue);
             abilityComponent.LastUsedTime = Time.time;
+            EffectDefinitions.CreateEffectEntity(abilityComponent, targetValue);
         }
 
         public static bool IsTargetInRange(AbilityComponent abilityComponent, WorldPositionComponent targetPosition)

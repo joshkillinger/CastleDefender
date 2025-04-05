@@ -13,7 +13,7 @@ namespace CastleDefender.System
         {
             foreach (var entity in EntityManager.QueryEntities(Query))
             {
-                var target = entity.TryGet<TargetingComponent>();
+                var target = entity.TryGet<TargetComponent>();
                 if (target.Value == null)
                 {
                     target.Value = FindTarget(entity);
@@ -45,7 +45,7 @@ namespace CastleDefender.System
         
         private static bool Query(Entity entity)
         {
-            return entity.Has<TargetingComponent>();
+            return entity.Has<TargetComponent>();
         }
 
         private static bool TargetQuery(Entity entity, Teams sourceTeam)

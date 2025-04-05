@@ -1,11 +1,11 @@
 ﻿using CastleDefender.Components;
-using jdkore.prefabs;
+using CastleDefender.System;
 using OOECS.Entity;
 using OOECS.PrefabProvider;
 using OOECS.system;
 using UnityEngine;
 
-namespace CastleDefender.System
+namespace CastleDefender.Mobs
 {
     public class MobInstantiator : MonoBehaviour, ISystem
     {

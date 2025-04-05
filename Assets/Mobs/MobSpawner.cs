@@ -39,7 +39,7 @@ namespace Mobs
             mob.Add(speed);
             mob.Add(new WorldPositionComponent(offscreenSpawnPoint));
             mob.Add(new OwningTeamComponent(Teams.Mobs));
-            mob.Add(new TargetingComponent());
+            mob.Add(new TargetComponent());
             mob.Add(new AbilityComponent(AbilityDefinitions.GetRangedAttack()));
 
             return mob;

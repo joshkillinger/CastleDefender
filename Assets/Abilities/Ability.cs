@@ -10,7 +10,7 @@ namespace CastleDefender.Abilities
         public string Name;
         public float Cooldown;
         public float Range;
-        public List<string> Tags;
+        public HashSet<string> Tags;
         public Action<AbilityComponent, Entity> Apply;
 
         public override string ToString() => Name;
